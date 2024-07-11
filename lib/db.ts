@@ -19,27 +19,26 @@ const db = new PrismaClient();
 //   console.log(users);
 // }
 
-async function test() {
-  //   const token = await db.sMSToken.create({
-  //     data: {
-  //       token: "12312132",
-  //       user: {
-  //         connect: {
-  //           id: 1,
-  //         },
-  //       },
-  //     },
-  //   });
-  const token = await db.sMSToken.findUnique({
-    where: {
-      id: 1,
-    },
-    include: {
-      user: true,
-    },
-  });
-  console.log(token);
-}
-test();
+// async function test() {
+//   //   const token = await db.sMSToken.create({
+//   //     data: {
+//   //       token: "12312132",
+//   //       user: {
+//   //         connect: {
+//   //           id: 1,
+//   //         },
+//   //       },
+//   //     },
+//   //   });
+//   const token = await db.sMSToken.findUnique({
+//     where: {
+//       id: 1,
+//     },
+//     include: {
+//       user: true,
+//     },
+//   });
+// }
+// test();
 
 export default db;
